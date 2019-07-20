@@ -1,9 +1,5 @@
 @extends('layout')
 
-@section('style')
-  <link rel="stylesheet" href="{{ asset('css/main/index.css') }}">
-@endsection
-
 @section('content')
 <div class="row">
   <div class="col-12 col-lg-10">
