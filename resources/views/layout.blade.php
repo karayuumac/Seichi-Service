@@ -26,6 +26,14 @@
 
       gtag('config', 'UA-144234149-1');
   </script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-7904110007301903",
+          enable_page_level_ads: true
+      });
+  </script>
 </head>
 
 <body>
