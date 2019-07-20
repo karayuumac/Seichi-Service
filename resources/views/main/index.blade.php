@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="row">
-  <div class="col-sm-12">
+  <div class="col-12">
     <div class="card border-primary">
       <div class="card-header">
         <i class="fa fa-info-circle fa-fw"></i>
@@ -15,7 +15,7 @@
           <div class="card">
             <div class="card-header">
               <i class="fa fa-info fa-fw"></i>
-              ホームページを開設しました
+              ホームページを開設しました<br>
               <span style="font-size: 1px">posted 2019/7/20(Sat) 17:35 by karayuu</span>
             </div>
             <div class="card-body">
