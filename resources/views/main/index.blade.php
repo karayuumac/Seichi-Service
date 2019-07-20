@@ -11,7 +11,7 @@
 
       <div class="card-body">
         <div class="card-group">
-          <!-- お知らせの中身 /-->
+          <!-- お知らせの中身 -->
           <div class="card">
             <div class="card-header">
               <i class="fa fa-info fa-fw"></i>

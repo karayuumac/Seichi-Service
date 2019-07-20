@@ -54,12 +54,14 @@
         <li class="nav-item">
           <a class="nav-link" href="#">ホーム</a>
         </li>
+        <!--
         <li class="nav-item">
           <a class="nav-link" href="#">一覧</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">クラウドファンディングとは</a>
         </li>
+        -->
       </ul>
     </div>
   </nav>
