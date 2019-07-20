@@ -16,7 +16,7 @@
             <div class="card-header">
               <i class="fa fa-info fa-fw"></i>
               ホームページを開設しました<br>
-              <span style="font-size: 1px">posted 2019/7/20(Sat) 17:35 by karayuu</span>
+              <span class="small">posted 2019/7/20(Sat) 17:35 by karayuu</span>
             </div>
             <div class="card-body">
               <p>

@@ -11,4 +11,10 @@ class MainController extends Controller
         'title' => 'クラウドファンディング - 整地鯖非公式'
     ]);
   }
+
+  public function policy() {
+    return view('main.policy', [
+        'title' => 'プライバシーポリシー - 整地鯖非公式'
+    ]);
+  }
 }

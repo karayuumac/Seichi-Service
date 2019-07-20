@@ -12,3 +12,4 @@
 */
 
 Route::get('/', 'MainController@index');
+Route::get('/policy', 'MainController@policy')->name('policy');

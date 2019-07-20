@@ -47,7 +47,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container-fluid">
       <!-- ブランド表示 -->
-      <a class="navbar-brand" href="#">整地鯖・クラウドファンディング(非公式)</a>
+      <a class="navbar-brand" href="/">整地鯖・クラウドファンディング(非公式)</a>
       <!-- 画面が小さい時の右に表示されるボタン -->
       <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse"
               aria-expanded="false">
@@ -58,7 +58,7 @@
       <div class="collapse navbar-collapse" id="navbar-collapse" aria-expanded="false">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#">ホーム</a>
+            <a class="nav-link" href="/">ホーム</a>
           </li>
           <!--
           <li class="nav-item">
@@ -68,10 +68,13 @@
             <a class="nav-link" href="#">クラウドファンディングとは</a>
           </li>
           -->
-        </ul>
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#">プライバシーポリシー</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">このサイトに関して</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="{{ route('policy') }}">プライバシーポリシー</a>
+              <a class="dropdown-item" href="#">お問い合わせ・ご意見ご感想フォーム</a>
+            </div>
           </li>
         </ul>
       </div>
