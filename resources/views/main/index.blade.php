@@ -1,17 +1,31 @@
 @extends('layout')
 
 @section('content')
-<div class="row">
-  <div class="col-12">
-    <div class="card border-primary">
-      <div class="card-header">
-        <i class="fa fa-info-circle fa-fw"></i>
-        お知らせ
-      </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="card border-primary">
+        <div class="card-header">
+          <i class="fa fa-info-circle fa-fw"></i>
+          お知らせ
+        </div>
 
-      <div class="card-body">
-        <div class="card-group">
+        <div class="card-body">
           <!-- お知らせの中身 -->
+          <div class="card mb-3">
+            <div class="card-header">
+              <i class="fa fa-info fa-fw"></i>
+              プライバシーポリシーを作成しました<br>
+              <span class="small">posted 2019/7/21(Sun) 03:08 by karayuu</span>
+            </div>
+            <div class="card-body">
+              <p>
+                プライバシーポリシーを作成しました。<br>
+                当サイト利用前に一度見ていただければ幸いです。<a href="{{ route('policy') }}">こちらをクリック</a><br>
+                この内容は適宜見直しを行い、更新する予定です。変更点はこちらのお知らせにてお知らせいたします。<br>
+              </p>
+            </div>
+          </div>
+
           <div class="card">
             <div class="card-header">
               <i class="fa fa-info fa-fw"></i>
@@ -29,5 +43,4 @@
       </div>
     </div>
   </div>
-</div>
 @endsection
