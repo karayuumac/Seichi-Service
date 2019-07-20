@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="row">
-  <div class="col-12 col-lg-10">
+  <div class="col-12">
     <div class="card border-primary">
       <div class="card-header">
         <i class="fa fa-info-circle fa-fw"></i>
@@ -28,9 +28,6 @@
         </div>
       </div>
     </div>
-  </div>
-  <div class="col-lg-2">
-    広告スペースですよ
   </div>
 </div>
 @endsection
