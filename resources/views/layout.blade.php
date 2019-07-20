@@ -13,7 +13,7 @@
 
   <style>
     body {
-      padding-top: 70px;
+      padding-top: 4.5rem;
     }
   </style>
 
@@ -21,7 +21,11 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144234149-1"></script>
   <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+
+      function gtag() {
+          dataLayer.push(arguments);
+      }
+
       gtag('js', new Date());
 
       gtag('config', 'UA-144234149-1');
@@ -40,29 +44,36 @@
 <div id="main-div" class="float-container">
   <!-- navbarの設定 -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <!-- ブランド表示 -->
-    <a class="navbar-brand" href="#">整地鯖・クラウドファンディング(非公式)</a>
-    <!-- 画面が小さい時の右に表示されるボタン -->
-    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse"
-            aria-expanded="false">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <div class="container">
+      <!-- ブランド表示 -->
+      <a class="navbar-brand" href="#">整地鯖・クラウドファンディング(非公式)</a>
+      <!-- 画面が小さい時の右に表示されるボタン -->
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse"
+              aria-expanded="false">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <!-- navbarの中身 -->
-    <div class="collapse navbar-collapse" id="navbar-collapse" aria-expanded="false">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#">ホーム</a>
-        </li>
-        <!--
-        <li class="nav-item">
-          <a class="nav-link" href="#">一覧</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">クラウドファンディングとは</a>
-        </li>
-        -->
-      </ul>
+      <!-- navbarの中身 -->
+      <div class="collapse navbar-collapse" id="navbar-collapse" aria-expanded="false">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">ホーム</a>
+          </li>
+          <!--
+          <li class="nav-item">
+            <a class="nav-link" href="#">一覧</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">クラウドファンディングとは</a>
+          </li>
+          -->
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">プライバシーポリシー</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
   <div id="main-container" class="container">
