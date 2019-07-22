@@ -64,10 +64,10 @@
           <li class="nav-item">
             <a class="nav-link" href="#">一覧</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">クラウドファンディングとは</a>
-          </li>
           -->
+          <li class="nav-item">
+            <a class="nav-link" href="{{ route('crowdfunding.about') }}">クラウドファンディングとは</a>
+          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">このサイトに関して</a>

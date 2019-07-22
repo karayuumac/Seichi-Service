@@ -14,6 +14,21 @@
           <div class="card mb-3">
             <div class="card-header">
               <i class="fa fa-info fa-fw"></i>
+              「クラウドファンディングとは」を作成しました<br>
+              <span class="small">posted 2019/7/21(Sun) 21:25 by karayuu</span>
+            </div>
+            <div class="card-body">
+              <p>
+                「クラウドファンディングとは」を作成しました。<br>
+                当サイトのコンテンツである整地鯖・クラウドファンディングについて解説したものになります。<br>
+                <a href="{{ route('crowdfunding.about') }}">ページはこちら</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="card mb-3">
+            <div class="card-header">
+              <i class="fa fa-info fa-fw"></i>
               プライバシーポリシーを作成しました<br>
               <span class="small">posted 2019/7/21(Sun) 03:08 by karayuu</span>
             </div>
