@@ -19,10 +19,10 @@ Route::get('/crowdfunding/about', 'CrowdfundingController@about')->name('crowdfu
 Route::get('/contact', 'InquiryController@form')->name('contact');
 /*Route::post('/contact/confirm', 'InquiryController@confirm')->name('confirm');*/
 Route::post('/contact/process', 'InquiryController@process')->name('process');
-//confirm, processはGETを呼ばれるとエラーが出るのでリダイレクト
-/*Route::get('/contact/confirm', function () {
-  return redirect()->route('contact');
-});*/
+//processはGETを呼ばれるとエラーが出るのでリダイレクト
 Route::get('/contact/process', function () {
   return redirect()->route('contact');
 });
+
+//sitemap.xml用
+Route::get('sitemap.xml', 'SitemapController@xml')->name('sitemap.xml');
