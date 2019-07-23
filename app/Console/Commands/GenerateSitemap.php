@@ -10,6 +10,6 @@ class GenerateSitemap extends Command {
   protected $description = 'Generate the sitemap';
 
   public function handle() {
-    SitemapGenerator::create(config('app.url'))->writeToFile(public_path('sitemap.xml'));
+    SitemapGenerator::create('https://seichi-service.herokuapp.com/')->writeToFile(public_path('storage/sitemap.xml'));
   }
 }
