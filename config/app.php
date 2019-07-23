@@ -175,7 +175,9 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
-        Kris\LaravelFormBuilder\FormBuilderServiceProvider::class
+        Kris\LaravelFormBuilder\FormBuilderServiceProvider::class,
+
+        \App\Providers\ValidatorServiceProvider::class
     ],
 
     /*

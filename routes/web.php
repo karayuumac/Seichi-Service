@@ -15,3 +15,14 @@ Route::get('/', 'MainController@index');
 Route::get('/policy', 'MainController@policy')->name('policy');
 
 Route::get('/crowdfunding/about', 'CrowdfundingController@about')->name('crowdfunding.about');
+
+Route::get('/contact', 'InquiryController@form')->name('contact');
+/*Route::post('/contact/confirm', 'InquiryController@confirm')->name('confirm');*/
+Route::post('/contact/process', 'InquiryController@process')->name('process');
+//confirm, processはGETを呼ばれるとエラーが出るのでリダイレクト
+/*Route::get('/contact/confirm', function () {
+  return redirect()->route('contact');
+});*/
+Route::get('/contact/process', function () {
+  return redirect()->route('contact');
+});

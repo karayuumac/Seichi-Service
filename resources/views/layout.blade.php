@@ -73,7 +73,7 @@
                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">このサイトに関して</a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="{{ route('policy') }}">プライバシーポリシー</a>
-              <a class="dropdown-item" href="#">お問い合わせ・ご意見ご感想フォーム</a>
+              <a class="dropdown-item" href="{{ route('contact') }}">お問い合わせ・ご意見ご感想フォーム</a>
             </div>
           </li>
         </ul>

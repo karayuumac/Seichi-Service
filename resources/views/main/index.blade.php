@@ -14,6 +14,21 @@
           <div class="card mb-3">
             <div class="card-header">
               <i class="fa fa-info fa-fw"></i>
+              「お問い合わせ・ご意見ご感想フォーム」を作成しました<br>
+              <span class="small">posted 2019/7/24(Wed) 01:18 by karayuu</span>
+            </div>
+            <div class="card-body">
+              <p>
+                利用者の皆様がお問い合わせ・ご意見ご感想を送信できるようにフォームを追加しました。<br>
+                なお、荒らし行為に関しては、ipアドレスによる接続規制を行う場合がございます。<br>
+                <a href="{{ route('contact') }}">フォームはこちら</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="card mb-3">
+            <div class="card-header">
+              <i class="fa fa-info fa-fw"></i>
               「クラウドファンディングとは」を作成しました<br>
               <span class="small">posted 2019/7/21(Sun) 21:25 by karayuu</span>
             </div>
