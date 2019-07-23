@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'MainController@index');
+Route::get('/', 'MainController@index')->name('index');
 Route::get('/policy', 'MainController@policy')->name('policy');
 
 Route::get('/crowdfunding/about', 'CrowdfundingController@about')->name('crowdfunding.about');
