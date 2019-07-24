@@ -23,3 +23,6 @@ Route::post('/contact/process', 'InquiryController@process')->name('process');
 Route::get('/contact/process', function () {
   return redirect()->route('contact');
 });
+
+//sitemap.xml用
+Route::get('sitemap.xml', 'SitemapController@xml')->name('sitemap.xml');
