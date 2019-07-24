@@ -2,7 +2,7 @@
 
 @section('content')
   <div class="row">
-    <div class="col-12">
+    <div class="col-10 mx-auto">
       <div class="card border-primary">
         <div class="card-header">
           <i class="fa fa-info-circle fa-fw"></i>
