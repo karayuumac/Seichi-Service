@@ -23,12 +23,7 @@ class InquiryController extends Controller
   public function process(InquiryRequest $request)
   {
     //保存操作
-    Inquiry::create([
-        'type_id' => $request->input('type_id'),
-        'minecraft_id' => $request->input('minecraft_id'),
-        'discord_id' => $request->input('discord_id'),
-        'content' => $request->input('content')
-    ]);
+    Inquiry::create($request->except('_token'));
 
     return view('inquiry.complete', [
         'title' => '送信終了 - 整地鯖非公式'

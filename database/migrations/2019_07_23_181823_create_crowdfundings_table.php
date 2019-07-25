@@ -17,8 +17,11 @@ class CreateCrowdfundingsTable extends Migration
       $table->bigIncrements('id');
       $table->string('name');
       $table->string('minecraft_id');
-      $table->string('discord_id')->nullable();
+      $table->string('discord_id');
       $table->text('description');
+      $table->integer('target_amount')->unsigned()->default(0);
+      $table->integer('current_amount')->unsigned()->default(0);
+      $table->dateTime('deadline')->nullable();
       $table->timestamps();
     });
   }

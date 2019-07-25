@@ -60,13 +60,14 @@
           <li class="nav-item">
             <a class="nav-link" href="/">ホーム</a>
           </li>
-          <!--
-          <li class="nav-item">
-            <a class="nav-link" href="#">一覧</a>
-          </li>
-          -->
-          <li class="nav-item">
-            <a class="nav-link" href="{{ route('crowdfunding.about') }}">クラウドファンディングとは</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdownCrowdfunding"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">クラウドファンディング</a>
+            <div class="dropdown-menu" aria-labelledby="dropdownCrowdfunding">
+              <a class="dropdown-item" href="{{ route('crowdfunding') }}">一覧</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="{{ route('crowdfunding.about') }}">クラウドファンディングとは</a>
+            </div>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"

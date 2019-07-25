@@ -4,13 +4,15 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Crowdfounding extends Model
+class Crowdfunding extends Model
 {
   protected $fillable = [
       'name',
       'minecraft_id',
       'discord_id',
-      'description'
+      'description',
+      'target_amount',
+      'deadline'
   ];
 
   public function donations()

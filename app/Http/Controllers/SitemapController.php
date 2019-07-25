@@ -11,11 +11,12 @@ class SitemapController extends Controller
   {
     $sitemap = \App::make("sitemap");
     $now = Carbon::now();
-    $sitemap->add(url('/'), $now, '1.0', 'daily');
-    $sitemap->add(url('/crowdfunding/about'), $now, '0.8', 'monthly');
-    $sitemap->add(url('/policy'), $now, '0.8', 'monthly');
-    $sitemap->add(url('/contact'), $now, '0.8', 'always');
-    $sitemap->store('xml', 'sitemap');
+    $sitemap->add(route('index'), $now, '1.0', 'daily');
+    $sitemap->add(route('crowdfunding.about'), $now, '0.8', 'monthly');
+    $sitemap->add(route('policy'), $now, '0.8', 'monthly');
+    $sitemap->add(route('contact'), $now, '0.8', 'always');
+    $sitemap->add(route('crowdfunding'), $now, '0.8', 'always');
+    $sitemap->add(route('crowdfunding.create'), $now, '0.8', 'always');
 
     return $sitemap->render('xml');
   }
