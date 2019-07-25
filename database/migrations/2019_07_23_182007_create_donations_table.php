@@ -21,7 +21,7 @@ class CreateDonationsTable extends Migration
       $table->integer('crowdfunding_id')->unsigned();
       $table->foreign('crowdfunding_id')->references('id')
           ->on('crowdfundings')->onDelete('restrict');
-      $table->string('server_id')->unsigned();
+      $table->integer('server_id')->unsigned();
       $table->foreign('server_id')->references('id')
           ->on('servers')->onDelete('restrict');
       $table->integer('x');
