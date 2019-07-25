@@ -35,6 +35,7 @@
               {{ $progress }}%
             </div>
           </div>
+
           <hr>
 
           <table class="table table-bordered mb-0 text-center">
@@ -49,7 +50,7 @@
             </tr>
             <tr>
               <th>期限</th>
-              <th>{{ $funding->deadline }}</th>
+              <th>{{ $funding->deadline }}(あと{{ $funding->carbonDeadline()->diffInDays(new \Carbon\Carbon()) }}日)</th>
             </tr>
             </tbody>
           </table>

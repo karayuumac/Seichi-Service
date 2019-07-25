@@ -13,7 +13,7 @@
         </div>
         <div class="list-group list-group-flush">
           <div class="list-group-item">
-            <h5 class="card-title "><strong>・広告の配信に関して</strong></h5>
+            <h5 class="card-title"><strong>・広告の配信に関して</strong></h5>
             当サイトでは、第三者配信の広告サービス「Google Adsense グーグルアドセンス」を利用しています。<br>
             広告配信事業者は、ユーザーの興味に応じた広告を表紙するためにCookie(クッキー)を利用することがあります。<br>
             Cookie(クッキー)を無効にする設定及び、Google Adsenseに関する詳細は「
