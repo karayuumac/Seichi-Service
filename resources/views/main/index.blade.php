@@ -14,6 +14,21 @@
           <div class="card mb-3">
             <div class="card-header">
               <i class="fa fa-info fa-fw"></i>
+              クラウドファンディング機能が完成しました<br>
+              <span class="small">posted 2019/7/27(Sat) 02:25 by karayuu</span>
+            </div>
+            <div class="card-body">
+              <p>
+                クラウドファンディング機能が完成しました。<br>
+                どんな些細なことでも(自分で使うためのような寄付の形でも)大歓迎です！<br>
+                皆さんでクラウドファンディングを盛り上げていきましょう！
+              </p>
+            </div>
+          </div>
+
+          <div class="card mb-3">
+            <div class="card-header">
+              <i class="fa fa-info fa-fw"></i>
               「お問い合わせ・ご意見ご感想フォーム」を作成しました<br>
               <span class="small">posted 2019/7/24(Wed) 01:18 by karayuu</span>
             </div>
