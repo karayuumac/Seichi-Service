@@ -18,10 +18,18 @@ class Crowdfunding extends Model
 
   public function donations()
   {
-    $this->hasMany(Donation::class, 'crowdfunding_id', 'id');
+    return $this->hasMany(Donation::class, 'crowdfunding_id', 'id');
   }
 
   public function carbonDeadLine() {
     return Carbon::parse($this->deadline);
+  }
+
+  public function currentAmount() {
+    $sum = 0;
+    foreach ($this->donations()->get() as $donation) {
+      $sum += $donation->donation_amount;
+    }
+    return $sum;
   }
 }

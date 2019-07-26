@@ -20,7 +20,6 @@ class CreateCrowdfundingsTable extends Migration
       $table->string('discord_id');
       $table->text('description');
       $table->integer('target_amount')->unsigned()->default(0);
-      $table->integer('current_amount')->unsigned()->default(0);
       $table->dateTime('deadline')->nullable();
       $table->timestamps();
     });

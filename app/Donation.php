@@ -10,6 +10,10 @@ class Donation extends Model
       'minecraft_id',
       'discord_id',
       'donation_amount',
-      'crowdfunding_id'
+      'crowdfunding_id',
+      'server_id',
+      'x',
+      'y',
+      'z'
   ];
 }

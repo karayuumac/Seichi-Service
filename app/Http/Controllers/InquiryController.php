@@ -15,7 +15,7 @@ class InquiryController extends Controller
     $inquiry_types = InquiryType::orderBy('id', 'asc')->pluck('name', 'id');
 
     return view('inquiry.create', [
-        'title' => 'お問い合わせ - 整地鯖非公式',
+        'title' => 'お問い合わせ',
         'inquiry_types' => $inquiry_types
     ]);
   }
@@ -26,7 +26,7 @@ class InquiryController extends Controller
     Inquiry::create($request->except('_token'));
 
     return view('inquiry.complete', [
-        'title' => '送信終了 - 整地鯖非公式'
+        'title' => '送信終了'
     ]);
   }
 }

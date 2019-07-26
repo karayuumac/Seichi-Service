@@ -22,7 +22,7 @@
             </div>
             <div class="list-group-item">
               <h5 class="card-title"><strong>・支援状態</strong></h5>
-              <?php $progress = $funding->current_amount / $funding->target_amount * 100 ?>
+              <?php $progress = $funding->currentAmount() / $funding->target_amount * 100 ?>
               <div class="progress">
                 <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
                      aria-valuenow="{{ $progress }}"
@@ -30,10 +30,10 @@
                   {{ $progress }}%
                 </div>
               </div>
-              達成率:{{ $progress }}% ({{ $funding->current_amount }}枚)
+              達成率:{{ $progress }}% ({{ $funding->currentAmount() }}枚)
               必要枚数:{{ $funding->target_amount }}枚
               <div class="ml-auto">
-                <a href="#" class="btn btn-primary">このプロジェクトを支援する</a>
+                <a href="{{ route('crowdfunding.support', $funding->id) }}" class="btn btn-primary">このプロジェクトを支援する</a>
               </div>
             </div>
             <div class="list-group-item">

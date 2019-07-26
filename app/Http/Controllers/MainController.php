@@ -8,13 +8,13 @@ class MainController extends Controller
 {
   public function index() {
     return view('main.index', [
-        'title' => 'クラウドファンディング - 整地鯖非公式'
+        'title' => 'クラウドファンディング'
     ]);
   }
 
   public function policy() {
     return view('main.policy', [
-        'title' => 'プライバシーポリシー - 整地鯖非公式'
+        'title' => 'プライバシーポリシー'
     ]);
   }
 }

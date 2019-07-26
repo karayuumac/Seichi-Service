@@ -19,6 +19,8 @@ Route::get('/crowdfunding', 'CrowdfundingController@index')->name('crowdfunding'
 Route::get('/crowdfunding/create', 'CrowdfundingController@create')->name('crowdfunding.create');
 Route::post('/crowdfunding', 'CrowdfundingController@store')->name('crowdfunding.store');
 Route::get('/crowdfunding/{id}', 'CrowdfundingController@show')->name('crowdfunding.show');
+Route::get('/crowdfunding/support/{id}', 'CrowdfundingController@support')->name('crowdfunding.support');
+Route::post('/crowdfunding/support/{id}', 'CrowdfundingController@support_store')->name('crowdfunding.support_store');
 
 Route::get('/contact', 'InquiryController@form')->name('contact');
 /*Route::post('/contact/confirm', 'InquiryController@confirm')->name('confirm');*/

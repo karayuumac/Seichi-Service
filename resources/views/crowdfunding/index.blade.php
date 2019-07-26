@@ -27,7 +27,7 @@
             <div class="card-text">{{ mb_substr($funding->description, 0, 200) }}</div>
           </div>
 
-          <?php $progress = $funding->current_amount / $funding->target_amount * 100 ?>
+          <?php $progress = $funding->currentAmount() / $funding->target_amount * 100 ?>
           <div class="progress">
             <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
                  aria-valuenow="{{ $progress }}"
@@ -42,7 +42,7 @@
             <tbody>
             <tr>
               <th>達成率</th>
-              <th>{{ $progress }}% ({{ $funding->current_amount }}枚)</th>
+              <th>{{ $progress }}% ({{ $funding->currentAmount() }}枚)</th>
             </tr>
             <tr>
               <th>プロジェクト考案者MCID</th>
@@ -50,12 +50,12 @@
             </tr>
             <tr>
               <th>期限</th>
-              <th>{{ $funding->deadline }}(あと{{ $funding->carbonDeadline()->diffInDays(new \Carbon\Carbon()) }}日)</th>
+              <th>{{ $funding->deadline }}(あと{{ $funding->carbonDeadLine()->diffInDays(new \Carbon\Carbon()) }}日)</th>
             </tr>
             </tbody>
           </table>
           <div class="btn-group">
-            <a href="#" class="btn btn-primary">支援する</a>
+            <a href="{{ route('crowdfunding.support', $funding->id) }}" class="btn btn-primary">支援する</a>
             <a href="{{ route('crowdfunding.show', $funding->id) }}" class="btn btn-secondary">詳細を見る</a>
           </div>
         </div>

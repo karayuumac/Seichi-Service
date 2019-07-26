@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Crowdfunding;
+use App\Donation;
 use App\Http\Requests\CrowdfundingRequest;
+use App\Http\Requests\DonationRequest;
+use App\Server;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 
@@ -12,7 +15,7 @@ class CrowdfundingController extends Controller
   public function about()
   {
     return view('crowdfunding.about', [
-        'title' => 'クラウドファンディングとは - 整地鯖非公式'
+        'title' => 'クラウドファンディングとは'
     ]);
   }
 
@@ -21,7 +24,7 @@ class CrowdfundingController extends Controller
     $fundings = Crowdfunding::all();
 
     return view('crowdfunding.index', [
-        'title' => 'クラウドファンディング一覧 - 整地鯖非公式',
+        'title' => 'クラウドファンディング一覧',
         'fundings' => $fundings
     ]);
   }
@@ -29,7 +32,7 @@ class CrowdfundingController extends Controller
   public function create()
   {
     return view('crowdfunding.create', [
-        'title' => 'クラウドファンディング作成 - 整地鯖非公式s'
+        'title' => 'クラウドファンディング作成'
     ]);
   }
 
@@ -48,12 +51,42 @@ class CrowdfundingController extends Controller
         ->with('flash_message', 'プロジェクトを作成しました。');
   }
 
-  public function show($id) {
+  public function show($id)
+  {
     $funding = Crowdfunding::find($id);
 
+    if (is_null($funding)) {
+      return redirect()->route('crowdfunding');
+    }
     return view('crowdfunding.show', [
         'title' => "プロジェクトの詳細",
         'funding' => $funding
     ]);
+
+  }
+
+  public function support($id)
+  {
+    $funding = Crowdfunding::find($id);
+    $servers = Server::orderBy('id', 'asc')->pluck('name', 'id');
+
+    if (is_null($funding)) {
+      return redirect()->route('crowdfunding');
+    }
+    return view('crowdfunding.support', [
+        'title' => "プロジェクトに支援",
+        'funding' => $funding,
+        'servers' => $servers
+    ]);
+  }
+
+  public function support_store($id, DonationRequest $request)
+  {
+    $inputs = $request->except('_token');
+    $inputs['crowdfunding_id'] = $id;
+    Donation::create($inputs);
+
+    return redirect()->route('crowdfunding')
+        ->with('flash_message', 'プロジェクトに支援しました。後日ガチャ券を回収しに伺います。');
   }
 }
