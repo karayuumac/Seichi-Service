@@ -60,6 +60,7 @@
               <table class="table table-bordered table-striped">
                 <thead>
                   <tr>
+                    <th class="text-center">日付・時刻</th>
                     <th class="text-center">支援者のMinecraft ID</th>
                     <th class="text-center">支援額</th>
                   </tr>
@@ -67,6 +68,7 @@
                 <tbody>
                   @foreach($donations as $donation)
                     <tr>
+                      <th class="text-center">{{ $donation->created_at }}</th>
                       <th class="text-center">{{ $donation->minecraft_id }}</th>
                       <th class="text-center">{{ $donation->donation_amount }}枚</th>
                     </tr>
