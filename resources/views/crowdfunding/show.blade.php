@@ -55,6 +55,25 @@
                 </tbody>
               </table>
             </div>
+            <div class="list-group-item">
+              <div class="card-title"><strong>・支援者</strong></div>
+              <table class="table table-bordered table-striped">
+                <thead>
+                  <tr>
+                    <th class="text-center">支援者のMinecraft ID</th>
+                    <th class="text-center">支援額</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  @foreach($donations as $donation)
+                    <tr>
+                      <th class="text-center">{{ $donation->minecraft_id }}</th>
+                      <th class="text-center">{{ $donation->donation_amount }}枚</th>
+                    </tr>
+                  @endforeach
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>

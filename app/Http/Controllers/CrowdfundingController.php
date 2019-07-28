@@ -54,13 +54,15 @@ class CrowdfundingController extends Controller
   public function show($id)
   {
     $funding = Crowdfunding::find($id);
+    $donations = $funding->donations();
 
     if (is_null($funding)) {
       return redirect()->route('crowdfunding');
     }
     return view('crowdfunding.show', [
         'title' => "プロジェクトの詳細",
-        'funding' => $funding
+        'funding' => $funding,
+        'donations' => $donations
     ]);
 
   }

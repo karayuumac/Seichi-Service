@@ -18,7 +18,7 @@ class Crowdfunding extends Model
 
   public function donations()
   {
-    return $this->hasMany(Donation::class, 'crowdfunding_id', 'id');
+    return $this->hasMany(Donation::class, 'crowdfunding_id', 'id')->get();
   }
 
   public function carbonDeadLine() {
@@ -27,7 +27,7 @@ class Crowdfunding extends Model
 
   public function currentAmount() {
     $sum = 0;
-    foreach ($this->donations()->get() as $donation) {
+    foreach ($this->donations() as $donation) {
       $sum += $donation->donation_amount;
     }
     return $sum;

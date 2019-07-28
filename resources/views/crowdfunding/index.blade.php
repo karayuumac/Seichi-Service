@@ -50,7 +50,10 @@
             </tr>
             <tr>
               <th>期限</th>
-              <th>{{ $funding->deadline }}(あと{{ $funding->carbonDeadLine()->diffInDays(new \Carbon\Carbon()) }}日)</th>
+              <th>
+                {{ $funding->deadline }}<br>
+                (あと{{ $funding->carbonDeadLine()->diffInDays(new \Carbon\Carbon()) }}日)
+              </th>
             </tr>
             </tbody>
           </table>
