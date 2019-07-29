@@ -10,10 +10,12 @@ class Inquiry extends Model
       'type_id',
       'minecraft_id',
       'discord_id',
-      'content'
+      'content',
+      'ip'
   ];
 
-  public function inquiry_type() {
+  public function inquiry_type()
+  {
     return $this->hasOne(InquiryType::class, 'id', 'type_id');
   }
 }
