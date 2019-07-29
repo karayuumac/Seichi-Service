@@ -22,8 +22,11 @@ class InquiryController extends Controller
 
   public function process(InquiryRequest $request)
   {
+    $inputs = $request->except('_token');
+    $inputs['ip'] = \Request::ip();
+
     //保存操作
-    Inquiry::create($request->except('_token'));
+    Inquiry::create($inputs);
 
     return view('inquiry.complete', [
         'title' => '送信終了'
