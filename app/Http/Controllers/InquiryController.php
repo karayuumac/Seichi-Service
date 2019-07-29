@@ -22,8 +22,11 @@ class InquiryController extends Controller
 
   public function process(InquiryRequest $request)
   {
+    \Request::setTrustedProxies(['127.0.0.1', $request->server->get('REMOTE_ADDR')],
+        Request::HEADER_X_FORWARDED_ALL);
+
     $inputs = $request->except('_token');
-    $inputs['ip'] = \Request::ip();
+    $inputs['ip'] = $request->ip();
 
     //保存操作
     Inquiry::create($inputs);
