@@ -32,3 +32,12 @@ Route::get('/contact/process', function () {
 
 //sitemap.xml用
 Route::get('sitemap.xml', 'SitemapController@xml')->name('sitemap.xml');
+
+/*Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');*/
+
+//JMSログイン
+Route::get('/jms/login', 'JMSController@login')->name('jms_login');
+Route::get('/jms/login/callback', 'JMSController@callback')->name('jms_callback');
+Route::get('/jms/logout', 'JMSController@logout')->name('jms_logout');

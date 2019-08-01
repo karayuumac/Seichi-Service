@@ -24,7 +24,6 @@ class InquiryRequest extends FormRequest
   public function rules()
   {
     return [
-      'minecraft_id' => 'required',
       'discord_id' => 'discord_id',
       'content' => 'required'
     ];
@@ -33,7 +32,6 @@ class InquiryRequest extends FormRequest
   public function attributes()
   {
     return [
-      'minecraft_id' => 'Minecraft ID',
       'discord_id' => 'Discord ID',
       'content' => 'お問い合わせ内容'
     ];

@@ -28,7 +28,6 @@ class DonationRequest extends FormRequest
         'x' => 'integer',
         'y' => 'integer',
         'z' => 'integer',
-        'minecraft_id' => 'required',
         'discord_id' => 'required|discord_id'
     ];
   }
@@ -40,7 +39,6 @@ class DonationRequest extends FormRequest
         'x' => 'x座標',
         'y' => 'y座標',
         'z' => 'z座標',
-        'minecraft_id' => 'Minecraft ID',
         'discord_id' => 'Discordユーザー名'
     ];
   }

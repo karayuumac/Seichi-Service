@@ -106,14 +106,6 @@
       </div>
 
       <div class="form-group">
-        {!! Form::label('minecraft_id', 'Minecraft ID') !!}
-        <span class="badge badge-danger">入力必須</span>
-        <span class="badge badge-success">公開</span>
-        {!! Form::text('minecraft_id', old('minecraft_id'), ['class' => 'form-control', 'placeholder' => 'Minecraft IDを入力してください。']) !!}
-        <small class="text-muted">MinecraftのIDを入力します。正確に入力してください。</small>
-      </div>
-
-      <div class="form-group">
         {!! Form::label('discord_id', 'Discord ユーザー名') !!}
         <span class="badge badge-danger">入力必須</span>
         <span class="badge badge-danger">非公開</span>

@@ -6,9 +6,11 @@ use App\Crowdfunding;
 use App\Donation;
 use App\Http\Requests\CrowdfundingRequest;
 use App\Http\Requests\DonationRequest;
+use App\JMSUser;
 use App\Server;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Session;
 
 class CrowdfundingController extends Controller
 {
@@ -31,6 +33,11 @@ class CrowdfundingController extends Controller
 
   public function create()
   {
+    if (!JMSUser::isLogin()) {
+      Session::put('callback_url', route('crowdfunding.create'));
+      return redirect()->route('jms_login');
+    }
+
     return view('crowdfunding.create', [
         'title' => 'クラウドファンディング作成'
     ]);
@@ -41,7 +48,7 @@ class CrowdfundingController extends Controller
     Crowdfunding::create([
         'name' => $request->input('name'),
         'description' => $request->input('description'),
-        'minecraft_id' => $request->input('minecraft_id'),
+        'minecraft_id' => JMSUser::getMinecraftID(),
         'discord_id' => $request->input('discord_id'),
         'deadline' => Carbon::parse($request->input('deadline')),
         'target_amount' => $request->input('target_amount')
@@ -75,6 +82,10 @@ class CrowdfundingController extends Controller
     if (is_null($funding)) {
       return redirect()->route('crowdfunding');
     }
+    if (!JMSUser::isLogin()) {
+      Session::put('callback_url', route('crowdfunding.support', $id));
+      return redirect()->route('jms_login');
+    }
     return view('crowdfunding.support', [
         'title' => "プロジェクトに支援",
         'funding' => $funding,
@@ -86,6 +97,7 @@ class CrowdfundingController extends Controller
   {
     $inputs = $request->except('_token');
     $inputs['crowdfunding_id'] = $id;
+    $inputs['minecraft_id'] = JMSUser::getMinecraftID();
     Donation::create($inputs);
 
     return redirect()->route('crowdfunding')

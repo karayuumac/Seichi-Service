@@ -24,12 +24,6 @@
       </div>
 
       <div class="form-group">
-        {!! Form::label('minecraft_id', 'Minecraft ID') !!}
-        <span class="badge badge-danger">入力必須</span>
-        {!! Form::text('minecraft_id', old('minecraft_id'), ['class' => 'form-control', 'placeholder' => 'Minecraft IDを入力してください。']) !!}
-      </div>
-
-      <div class="form-group">
         {!! Form::label('discord_id', 'Discord ユーザー名') !!}
         {!! Form::text('discord_id', old('discord_id'), ['class' => 'form-control', 'placeholder' => 'Discord ユーザー名を#の後の4桁の数を含めて入力してください。']) !!}
         <small class="text-muted">返信が必要な場合は入力してください。</small>

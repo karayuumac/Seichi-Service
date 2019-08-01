@@ -78,6 +78,25 @@
             </div>
           </li>
         </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="userDropdown"
+               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              @if (\App\JMSUser::isLogin())
+                {{ \App\JMSUser::getMinecraftID()}}
+              @else
+                未ログイン
+              @endif
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+              @if (\App\JMSUser::isLogin())
+                <a class="dropdown-item" href="{{ route('jms_logout') }}">JMSからログアウト</a>
+              @else
+                <a class="dropdown-item" href="{{ route('jms_login') }}">JMSにログイン</a>
+              @endif
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
   </nav>

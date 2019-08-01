@@ -100,12 +100,6 @@
       <hr>
 
       <div class="form-group">
-        {!! Form::label('minecraft_id', 'Minecraft ID') !!}
-        <span class="badge badge-danger">入力必須</span>
-        {!! Form::text('minecraft_id', old('minecraft_id'), ['class' => 'form-control', 'placeholder' => 'Minecraft IDを入力してください。']) !!}
-      </div>
-
-      <div class="form-group">
         {!! Form::label('discord_id', 'Discord ユーザー名') !!}
         <span class="badge badge-danger">入力必須</span>
         <span class="badge badge-danger">非公開</span>

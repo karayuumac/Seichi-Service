@@ -28,7 +28,6 @@ class CrowdfundingRequest extends FormRequest
         'description' => 'required',
         'target_amount' => 'integer|min:1',
         'deadline' => 'after:now',
-        'minecraft_id' => 'required',
         'discord_id' => 'required|discord_id'
     ];
   }
@@ -40,7 +39,6 @@ class CrowdfundingRequest extends FormRequest
         'description' => 'プロジェクトの説明',
         'target_amount' => '必要支援額',
         'deadline' => '期限',
-        'minecraft_id' => 'Minecraft ID',
         'discord_id' => 'Discordユーザー名'
     ];
   }
