@@ -32,7 +32,10 @@ Route::get('/contact/process', function () {
 
 //sitemap.xml用
 Route::get('sitemap.xml', 'SitemapController@xml')->name('sitemap.xml');
-
+//ads.txt用
+Route::get('/ads.txt', function () {
+  return view('adsense.ads');
+});
 /*Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');*/
