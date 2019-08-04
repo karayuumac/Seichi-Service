@@ -2,7 +2,7 @@
 
 @section('content')
   <div class="row">
-    <div class="col-10 mx-auto">
+    <div class="col-12 col-lg-10">
       <div class="card border-primary">
         <div class="card-header">
           <i class="fa fa-info-circle fa-fw"></i>
@@ -22,6 +22,20 @@
                 プライバシーポリシーにIPアドレスの扱いに関して記載しました。
               </p>
             </div>
+          </div>
+
+          <div>
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- メイン文章中広告 -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-7904110007301903"
+                 data-ad-slot="8784623876"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
           </div>
 
           <div class="card mb-3">
@@ -99,6 +113,19 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="col-lg-2">
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- メイン右側広告 -->
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-7904110007301903"
+           data-ad-slot="2470496969"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
     </div>
   </div>
 @endsection
