@@ -24,7 +24,7 @@
             </div>
           </div>
 
-          <div class="mb-3">
+          <div class="card mb-3">
             <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
             <!-- メイン文章中広告 -->
             <ins class="adsbygoogle"
