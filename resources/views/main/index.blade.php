@@ -14,12 +14,15 @@
           <div class="card mb-3">
             <div class="card-header">
               <i class="fa fa-info fa-fw"></i>
-              プライバシーポリシーを修正しました。<br>
-              <span class="small">posted 2019/7/29(Mon) 11:43 by karayuu</span>
+              <span style="color: red">キャンペーンのお知らせ</span><br>
+              <span class="small">posted 2019/8/9(Fri) 1:32 by karayuu</span>
             </div>
             <div class="card-body">
               <p>
-                プライバシーポリシーにIPアドレスの扱いに関して記載しました。
+                整地鯖・クラウドファンディングではただいまキャンペーンを実施中です。<br>
+                キャンペーン中にプロジェクトを作成していただいた方全員にガチャ券1000枚をプレゼント！！<br>
+                キャンペーン期間は8/31まで。この機会をお見逃しなく！！<br>
+                プロジェクトの作成は<a href="{{ route('crowdfunding.create') }}">こちら</a>から。
               </p>
             </div>
           </div>
@@ -36,6 +39,19 @@
             <script>
                 (adsbygoogle = window.adsbygoogle || []).push({});
             </script>
+          </div>
+
+          <div class="card mb-3">
+            <div class="card-header">
+              <i class="fa fa-info fa-fw"></i>
+              プライバシーポリシーを修正しました。<br>
+              <span class="small">posted 2019/7/29(Mon) 11:43 by karayuu</span>
+            </div>
+            <div class="card-body">
+              <p>
+                プライバシーポリシーにIPアドレスの扱いに関して記載しました。
+              </p>
+            </div>
           </div>
 
           <div class="card mb-3">
