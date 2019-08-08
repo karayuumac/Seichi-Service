@@ -76,6 +76,20 @@
                 </tbody>
               </table>
             </div>
+            <div class="list-group-item">
+              <div class="card-title"><strong>・広告</strong></div>
+              <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+              <!-- プロジェクト詳細ページ広告 -->
+              <ins class="adsbygoogle"
+                   style="display:block"
+                   data-ad-client="ca-pub-7904110007301903"
+                   data-ad-slot="4844414830"
+                   data-ad-format="auto"
+                   data-full-width-responsive="true"></ins>
+              <script>
+                  (adsbygoogle = window.adsbygoogle || []).push({});
+              </script>
+            </div>
           </div>
         </div>
       </div>

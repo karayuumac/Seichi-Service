@@ -2,8 +2,7 @@
 
 @section('content')
   <div class="row">
-    <div class="col-1"></div>
-    <div class="col-10">
+    <div class="col-12 col-lg-10">
       <div class="card border-primary">
         <div class="card-header text-center">
           <h5>
@@ -56,6 +55,18 @@
         </div>
       </div>
     </div>
-    <div class="col-1"></div>
+    <div class="col-lg-2">
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- ポリシー右広告 -->
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-7904110007301903"
+           data-ad-slot="9948088770"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
   </div>
 @endsection
