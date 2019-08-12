@@ -32,4 +32,8 @@ class Crowdfunding extends Model
     }
     return $sum;
   }
+
+  public function isExpired() {
+    return $this->carbonDeadLine() < Carbon::now();
+  }
 }

@@ -24,10 +24,13 @@ class CrowdfundingController extends Controller
   public function index()
   {
     $fundings = Crowdfunding::all();
+    $filtered_fundings = $fundings->filter(function ($f) {
+      return !$f->isExpired();
+    });
 
     return view('crowdfunding.index', [
         'title' => 'クラウドファンディング一覧',
-        'fundings' => $fundings
+        'fundings' => $filtered_fundings
     ]);
   }
 
