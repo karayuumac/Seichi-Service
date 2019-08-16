@@ -33,7 +33,14 @@
               達成率:{{ $progress }}% ({{ $funding->currentAmount() }}枚)
               必要枚数:{{ $funding->target_amount }}枚
               <div class="ml-auto">
-                <a href="{{ route('crowdfunding.support', $funding->id) }}" class="btn btn-primary">このプロジェクトを支援する</a>
+                <a href="{{ route('crowdfunding.support', $funding->id) }}" class="btn btn-primary @if($funding->isExpired()) disabled @endif">
+                  このプロジェクトを支援する
+                </a>
+                @if($funding->isExpired())
+                  <!-- プロジェクトの期限切れの時 -->
+                  <i class="fas fa-question-circle" aria-hidden="true" data-toggle="tooltip"
+                     data-original-title="このプロジェクトは支援可能期限が過ぎているため支援できません。"></i>
+                @endif
               </div>
             </div>
             <div class="list-group-item">

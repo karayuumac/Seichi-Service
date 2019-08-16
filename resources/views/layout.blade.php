@@ -39,6 +39,12 @@
           enable_page_level_ads: true
       });
   </script>
+
+  <script type="text/javascript">
+      $(function () {
+          $('[data-toggle="tooltip"]').tooltip()
+      })
+  </script>
 </head>
 
 <body>

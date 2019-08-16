@@ -58,7 +58,14 @@
             </tbody>
           </table>
           <div class="btn-group">
-            <a href="{{ route('crowdfunding.support', $funding->id) }}" class="btn btn-primary">支援する</a>
+            <a href="{{ route('crowdfunding.support', $funding->id) }}" class="btn btn-primary @if($funding->isExpired()) disabled @endif">
+              支援する
+            </a>
+            @if($funding->isExpired())
+              <!-- プロジェクトの期限切れの時 -->
+              <i class="fas fa-question-circle" aria-hidden="true" data-toggle="tooltip"
+                 data-original-title="このプロジェクトは支援可能期限が過ぎているため支援できません。"></i>
+            @endif
             <a href="{{ route('crowdfunding.show', $funding->id) }}" class="btn btn-secondary">詳細を見る</a>
           </div>
         </div>
