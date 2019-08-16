@@ -80,10 +80,15 @@ class CrowdfundingController extends Controller
   public function support($id)
   {
     $funding = Crowdfunding::find($id);
-    $servers = Server::orderBy('id', 'asc')->pluck('name', 'id');
-
     if (is_null($funding)) {
       return redirect()->route('crowdfunding');
+    }
+
+    $servers = Server::orderBy('id', 'asc')->pluck('name', 'id');
+
+    if ($funding->isExpired()) {
+      return redirect()->route('crowdfunding')
+          ->with('flash_message_error', '支援しようとしたプロジェクトは既に期限切れです。');
     }
     if (!JMSUser::isLogin()) {
       Session::put('callback_url', route('crowdfunding.support', $id));

@@ -53,7 +53,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container-fluid">
       <!-- ブランド表示 -->
-      <a class="navbar-brand" href="/">整地鯖・クラウドファンディング(非公式)</a>
+      <a class="navbar-brand" href="/">整地鯖非公式サービス</a>
       <!-- 画面が小さい時の右に表示されるボタン -->
       <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse"
               aria-expanded="false">

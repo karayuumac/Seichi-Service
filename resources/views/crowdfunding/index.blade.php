@@ -7,6 +7,10 @@
     <div class="alert alert-success">{{ session('flash_message') }}</div>
     <hr>
   @endif
+  @if (session('flash_message_error'))
+    <div class="alert alert-danger">{{ session('flash_message_error') }}</div>
+    <hr>
+  @endif
 
   <div class="text-center">
     <h5>クラウドファンディング一覧</h5>
